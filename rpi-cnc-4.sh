@@ -52,20 +52,21 @@ echo '[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.bas
 echo 'eval "$(pyenv init -)"' >> ~/.bashrc
 
 source ~/.bashrc
+hash -r
 
 pyenv install 3.11.2
 
 cd ~/bCNC
 
 pyenv local 3.11.2
-
 pyenv rehash
+hash -r
 
 cd ~/Desktop
 
 pyenv local 3.11.2
-
 pyenv rehash
+hash -r
 
 cd $home
 pip install pyserial numpy Pillow mttkinter matplotlib gpiozero
